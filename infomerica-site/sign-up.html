@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up form</title>
+    <link rel="stylesheet" href="./infomerica-style.css">
+    <script src="./script.js"></script>
+    
+</head>
+<body class="back">
+    <header>
+        <nav>
+            <img class="info-logo" src="./images/infomerica-logo.png">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li id="btn"> <a href="sign-up.html">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+       <div class="data">
+        <h1>Sign-Up</h1>
+        <form name="myForm" id="myform">
+            <dl class="box">
+                <dt>User Name</dt>
+                <dd><input onkeyup="verifyuser()" type="text" class="name" id="username"> </dd>
+                <dd id="name-err"></dd>
+                <dt>Password</dt>
+                <dd><input onkeyup="verifypassword()" type="password" class="password" id="password"> </dd>
+                <dd id="password-err"></dd>
+                <dt>email</dt>
+                <dd><input onkeyup="verifyemail()" type="email" class="email" id="email"> </dd>
+                <dd id="email-err"></dd>
+                <dt>Mobile</dt>
+                <dd><input  onkeyup="verifymobile()" type="number" class="mobile" id="mobile"> </dd>
+                <dd id="mobile-err"></dd>
+            </dl>
+        </form>
+        <button onclick="submitclick()" id="submit" class="submit">Submit</button>
+       </div>
+
+    </div>
+    <div id="demo">
+
+    </div>
+    
+</body>
+</html>
