@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onlineshopping-Index</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    
+</head>
+<body class="container-fluid">
+    <header class="text-center p-3 d-flex justify-content-between ">
+    <img id="logo" src="./images/328-3288902_flipkart-logo-flipkart-new-logo-png-transparent-png.png">
+            <ul id="nav" class="nav nav-tabs w-50">
+                <li class="nav-item"><a target="frame" href="home.html" class="nav-link">Home</a></li> 
+                <li  class="nav-item"><a  target="frame" href="electronics.html" class="nav-link">Electronics</a></li> 
+                <li class="nav-item"><a  target="frame" href="fashion.html" class="nav-link">Fashion</a></li> 
+                <li class="nav-item"><a  target="frame" href="jewelery.html" class="nav-link">Jewelery</a></li> 
+                <li class="nav-item"><a target="frame" href="login.html" class="nav-link">Login</a></li> 
+            </ul>
+           
+        <div class="input-group w-50">
+            <input id="searchbox" class="form-control " type="text" placeholder="Enter here">
+            <button onclick="searchclick()" class="btn btn-danger input-group-text">Search</button>
+        </div>
+        <div>
+            <button class="btn btn-outline-danger" data-bs-target="#cart1" data-bs-toggle="modal" onclick="LoadCartItems()" 
+            id="cartbtn" class="btn btn-primary">
+            <span class="bi bi-cart4"></span>Cart [<span id="Count"></span> ]</button>
+            <div class="modal fade" id="cart1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Your Cart Items</h3>
+                            <button data-bs-dismiss="modal" class="btn-close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Preview</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cartBody">
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-bs-dismiss="modal" class="btn btn-primary">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+    <section>
+       <iframe src="home.html" class="w-100" style="height:540px;" id="frame" name="frame"></iframe>
+    </section>
+    <script src="./script.js"></script>
+      <script src="./node_modules/jquery/dist/jquery.js"></script>
+      <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

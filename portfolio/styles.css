@@ -1,0 +1,229 @@
+body{
+    padding:0;
+    margin:0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:black;
+    color:white;
+}
+.intro p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.intro h2{
+    font-size: 40px;
+    font-weight: none;
+}
+.intro a{
+    color:red;
+}
+.intro{
+   padding:4rem 1rem 9rem 3rem;
+}
+.line{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    display: block;
+    font-weight: normal;
+    color:aqua;
+}
+h1,h2,h3{
+    margin-top: 0;
+}
+.contact{
+    text-align: center;
+    background-color: rgb(74, 4, 139);
+    padding:10px;
+}
+.contact a{
+    color:red
+}
+.email{
+    background-color: aqua;
+    color:red;
+    padding:5px;
+    border:none;
+    border-radius: 5px;
+    width:80px;
+}
+a:hover{
+    text-decoration: none;
+}
+.contact p:last-child{
+    margin-top: 3rem;
+    font-size: 20px;
+}
+nav a{
+    color:aqua;
+    font-size: 20px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    width:700px;
+    justify-content: space-between;
+    
+
+}
+nav{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,12,9,1) 35%, rgba(0,212,255,1) 100%);
+    height:80px;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    position:sticky;
+    top:0;
+} 
+
+nav a{
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+    color:yellow;
+}
+.btn{
+    background-color: red;
+    color:white;
+    width:100px;
+    padding:8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.btn:hover{
+    background-color: yellow;
+    color:black;
+}
+.insta{
+    width:40px;
+    height:40px;
+}
+footer ul{
+    list-style-type:none;
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
+footer button:hover{
+    background-color: blueviolet;
+    
+}
+footer{
+    text-align: center;
+    padding:20px;
+    background-color: #333;
+}
+.gradient{
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,12,9,1) 35%, rgba(0,212,255,1) 100%); */
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,120,9,1) 35%, rgba(0,212,255,1) 100%); */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,240,252,1) 35%, rgba(0,212,255,1) 100%);
+    height:5px;
+}
+/* projects section  */
+.projects{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,12,9,1) 35%, rgba(0,212,255,1) 100%);
+    color:white;
+    padding:4rem 1rem;
+}
+.projects h2{
+    font-size: 2rem;
+    margin-bottom: calc(2.1rem * 1.5);
+}
+.projects h3{
+    color:rgba(248, 16, 16, 0.842);
+    font-weight: bold;
+}
+.projects h4{
+    font-size: 1rem;
+    margin:1.5px;
+}
+.para{
+    background-color: #333;
+    color:white;
+    padding:1.5rem;
+    font-size: 15px;
+    line-height: 1.4;
+    border-radius: 40px;
+}
+.projects ul{
+    list-style-type: none; 
+    display:flex;    
+    gap:1rem;
+    padding:0;
+    margin:0;
+    font-size: 1rem;
+    color:rgba(248, 16, 16, 0.842);
+    font-weight: bold;
+}
+.css-image{
+    border-left: 1px solid aqua;
+    border-top: 1px solid aqua;
+    border-radius: 25px;
+    padding:1rem;  
+    width:400px;
+    height:300px;
+    margin:2rem 0 1rem 0;
+}
+
+@media (min-width:550px){
+     article{
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        grid-template-columns: repeat(10,1fr);
+        gap:15px;
+     }
+     .projects .css-image{
+        grid-column: 1/7;
+        grid-row: 1/2;
+        margin:2rem 0 3rem 2rem;
+       width:80%;
+       height:380px;
+    }
+    .projects .text{
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order:2;
+        text-align: right;
+        margin-right: 200px;
+    }
+    .projects ul{
+        justify-content: flex-end;
+    }
+}
+/* reverse section */
+
+@media (min-width:550px){
+    article {
+       display: grid;
+       /* grid-template-columns: 1fr 1fr; */
+       grid-template-columns: repeat(10,1fr);
+       gap:15px;
+    }
+    .projects .reverse .css-image {
+       grid-column: 5/11;
+       grid-row: 1/2;
+       margin:2rem 0 3rem 2rem;
+       width:80%;
+       height:380px;
+   }
+   .projects .reverse .text{
+       grid-column: 1/8;
+       grid-row: 1/2;
+       text-align: left;
+       margin-left: 100px;
+   }
+   .projects ul{
+       justify-content: flex-start;
+   }
+}
+
+/* About me */
+.about{
+    padding:3rem 2rem 3rem 2rem;
+}
+.about h1{
+    color:aqua;
+}
